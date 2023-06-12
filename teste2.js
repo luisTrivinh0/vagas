@@ -1,17 +1,16 @@
-var data =  require("./fakeData");
+var data = require("./fakeData");
 
-module.exports = function(req, res){
-  
-    var name =  req.body.name;
-    var jov =  req.body.job;
-    
-    var newUser = {
-        name: name,
-        job: job,
-    }
+module.exports = function (req, res) {
+  var name = req.body.name;
+  var job = req.body.job; // Corrige o nome da variável para 'job'
 
-    data.push(newUser)
-    
-    res.send(newUser);
+  var newUser = {
+    name: name,
+    job: job,
+  };
 
+  data.push(newUser); // Adiciona o novo usuário ao array 'data'
+
+  res.send(newUser); // Envia uma resposta com o novo usuário adicionado
 };
+
